@@ -9,7 +9,7 @@
 import expect from "chai";
 import assert from "chai";
 
-import add from '../application/add.js'
+import add from '../application/add.js';
 
 
 var myAssert = assert.assert;
