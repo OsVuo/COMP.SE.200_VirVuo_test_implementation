@@ -16,7 +16,7 @@ jobs:
       run: npm install
       
     - name: mocha install
-      run: npm install mocha
+      run: npm install --save-dev mocha chai
 
     - name: Test run
       run: npm run test
