@@ -14,6 +14,9 @@ jobs:
 
     - name: npm install
       run: npm install
+      
+    - name: mocha install
+      run: npm install mocha
 
     - name: Test run
       run: npm run test
