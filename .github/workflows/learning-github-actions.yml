@@ -15,7 +15,7 @@ jobs:
     - name: npm install
       run: npm install
 
-    - name: Test ${{ matrix.test_number }}
+    - name: Test run
       run: npm run test
       
     - name: Coveralls Parallel
