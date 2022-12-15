@@ -11,6 +11,11 @@ import assert from "chai";
 
 import add from '../application/add.js';
 
+// in order to get istanbul (nrc) working we need require() statements.....
+//var add = require('../application/add.js');
+//var assert = require('chai').assert;
+//var expect = require('chai').expect;
+
 
 var myAssert = assert.assert;
 var myExpect = expect.expect;
