@@ -23,6 +23,9 @@ jobs:
         with:
           node-version: '${{ matrix.node }}'
       - uses: actions/checkout@v2
+      - uses: actions/labeler@v4
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Cache node_modules'
         uses: actions/cache@v2
         with:
@@ -35,4 +38,5 @@ jobs:
       - name: Run All Node.js Tests
         run: npm run test
       - name: Run coverage
+        
         run: npm run coverage
