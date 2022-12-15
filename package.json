@@ -101,7 +101,7 @@
   "scripts": {
     "test": "mocha",
     "test_with_coverage": "nyc  --all --reporter=text mocha",
-    "coverage": "nyc report --reporter=text-lcov | coveralls"
+    "coverage": "nyc report --all --reporter=text-lcov | coveralls"
   },
   "nyc":{
     "exclude":["**/.internal/*", "**/test/*"]
