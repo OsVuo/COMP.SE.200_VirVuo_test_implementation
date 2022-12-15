@@ -100,7 +100,7 @@
   },
   "scripts": {
     "test": "mocha",
-    "test_with_coverage": "nyc  --all --reporter=text mocha",
+    "test_with_coverage": "nyc  --all --reporter=text-lcov mocha",
     "coverage": "nyc report --all --reporter=text-lcov | coveralls"
   },
   "nyc":{
