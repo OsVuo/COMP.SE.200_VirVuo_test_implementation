@@ -15,10 +15,10 @@ var myExpect = expect.expect;
 describe('expect', function(){
     
     it('should exclude the values in the second array from the first array', function(){
-        myExpect(ceil([2,1], [2,3])).to.equal([1]);
+        myExpect(difference([2,1], [2,3])).to.equal([1]);
     });
 
     it('should return an empty array if both arrays are identical', function(){
-        myExpect(ceil([2,1], [2,1])).to.equal([]);
+        myExpect(difference([2,1], [2,1])).to.equal([]);
     });
 });
