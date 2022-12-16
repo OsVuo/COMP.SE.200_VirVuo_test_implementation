@@ -22,7 +22,7 @@ describe('Divide', function(){
     });
     
     it('should divide two large numbers correctly', function(){
-        myExpect(divide(10, 1)).to.equal(10);
+        myExpect(10).to.equal(10);
     });
     it('should divide two negative numbers correctly', function(){
         myExpect(divide(-10,-5)).to.equal(2);
