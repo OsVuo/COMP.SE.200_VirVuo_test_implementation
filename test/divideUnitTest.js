@@ -25,10 +25,10 @@ describe('Divide', function(){
     });
     
     it('should divide two large numbers correctly', function(){
-        myAssert.equal(divide(1000000000000000000000000, 100000000000000000000000), 10);
+        myExpect(divide(1000000000000000000000000, 100000000000000000000000)).to.equal(10);
     });
     it('should divide two negative numbers correctly', function(){
-        myAssert.equal(divide(-5, -5), -1);
+        myExpect(divide(-5,-5)).to.equal(1);
     });
     it('should throw an error when given two illiegal arguments', function(){
         const illiegalArgumentsAdd = () => divide('a', 'b');
