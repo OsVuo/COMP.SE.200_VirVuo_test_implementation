@@ -20,10 +20,10 @@ describe('Ceil', function(){
     it('should round up to a desired precision correctly', function(){
         myExpect(ceil(6.0009, 2)).equal(6.01);
     });
-    it('entering a negative decimal point should still work', function(){
-        myExpect(ceil(6.0009, -2)).equal(6.01);
+    it('entering a negative precision point should work correctly', function(){
+        myExpect(ceil(6040, -2)).equal(6100);
     });
-    it('should throw an error when given two illiegal arguments', function(){
+    it('should throw an error when given two illegal arguments', function(){
         const illiegalArgumentsAdd = () => add('a', 'b');
         myExpect(illiegalArgumentsAdd).to.throw();
     });
