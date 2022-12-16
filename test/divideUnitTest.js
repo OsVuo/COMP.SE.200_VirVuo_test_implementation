@@ -18,13 +18,13 @@ describe('Divide', function(){
     });
 
     it('dividing two numbers should not equal', function(){
-        myExpect(divide(2,2)).to.not.equal(2);
+        myExpect(divide(4,2)).to.not.equal(1);
     });
     
     it('should divide two large numbers correctly', function(){
         myExpect(divide(10, 1)).to.equal(10);
     });
     it('should divide two negative numbers correctly', function(){
-        myExpect(divide(-5,-5)).to.equal(1);
+        myExpect(divide(-10,-5)).to.equal(2);
     });
 });
