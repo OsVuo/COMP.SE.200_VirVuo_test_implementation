@@ -30,13 +30,14 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-v${{ matrix.node }}-
       - name: Install Dependencies
-        run: npm ci
+        run: npm install
+      - name: Run All Node.js Tests
+        run: npm run test_with_coverage
       - name: form lcov report
         run: npm run coverage
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run All Node.js Tests
-        run: npm run test_with_coverage
+
 
