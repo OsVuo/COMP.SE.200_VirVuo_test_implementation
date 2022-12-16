@@ -101,7 +101,7 @@
   },
   "scripts": {
     "test": "npx c8 -n '**/application/*' -x '**/application/.internal/*' mocha",
-    "test_with_coverage": "npx c8 --all --exclude '*/test/*' -r lcov mocha"
+    "test_with_coverage": "npx c8 -n '**/application/*' -x '**/application/.internal/*' -r lcov mocha"
   },
   
   "repository": {
