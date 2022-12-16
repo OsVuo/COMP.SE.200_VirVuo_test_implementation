@@ -14,7 +14,6 @@ jobs:
     strategy:
       matrix:
         node:
-          - 14
           - 16
           - 18
     steps:
@@ -31,12 +30,11 @@ jobs:
             ${{ runner.os }}-node-v${{ matrix.node }}-
       - name: Install Dependencies
         run: npm install
-      - name: form lcov report
-        run: npm run coverage
+      - name: Run All Node.js Tests
+        run: npm run test_with_coverage
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run All Node.js Tests
-        run: npm run test_with_coverage
+
 
