@@ -32,8 +32,6 @@ jobs:
         run: npm install
       - name: Run All Node.js Tests
         run: npm run test_with_coverage
-      - name: form lcov report
-        run: npm run coverage
       - name: Coveralls
         uses: coverallsapp/github-action@master
         with:
