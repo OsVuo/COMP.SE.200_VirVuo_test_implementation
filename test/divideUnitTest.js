@@ -17,7 +17,7 @@ var myExpect = expect.expect;
 describe('Divide', function(){
     
     it('should divide two numbers correctly', function(){
-        myExpect(divide(4,2)).to.be.eq(2);
+        myExpect(divide(6,4)).to.deep.equal(1.5)
     });
 
     it('dividing two numbers should not equal', function(){
