@@ -21,4 +21,14 @@ describe('expect', function(){
     it('should return an empty array if both arrays are identical', function(){
         myExpect(difference([2,1], [2,1])).deep.to.eq([]);
     });
+    it('should return an the original array if comparing with an empty array', function(){
+        myExpect(difference([2,1], [])).deep.to.eq([2,1]);
+    });
+    it('should return an empty array if the first array is empty', function(){
+        myExpect(difference([], [2,3])).deep.to.eq([]);
+    });
+    it('should return an empty array if the first array is empty', function(){
+        myExpect(difference([1,2,NaN,"b"], ["b",3])).deep.to.eq([1,2]);
+    });
+
 });
