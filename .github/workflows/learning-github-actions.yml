@@ -11,7 +11,9 @@ jobs:
   test:
     name: 'Node.js v${{ matrix.node }}'
     runs-on: ubuntu-latest
+    continue-on-error: true
     strategy:
+      fail-fast: false
       matrix:
         node:
           - 16
