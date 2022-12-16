@@ -11,7 +11,7 @@ import ceil from '../application/ceil.js';
 
 var myExpect = expect.expect;
 
-describe('Divide', function(){
+describe('Ceil', function(){
     
     it('should round up correctly to a whole number when no desired precision is entered', function(){
         myExpect(ceil(4.006)).to.equal(5);
