@@ -30,7 +30,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-v${{ matrix.node }}-
       - name: Install Dependencies
-        run: npm install
+        run: npm ci
       - name: form lcov report
         run: npm run coverage
       - name: Coveralls
