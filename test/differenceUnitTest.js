@@ -30,11 +30,13 @@ describe('expect', function(){
     it('should work with with other values besides integers', function(){
         myExpect(difference([1,2,NaN,"b"], ["b",3,NaN])).deep.to.eq([1,2]);
     });
-    it('return an empty array without Arrays', function(){
-        myExpect(difference(2, ["b",3,NaN])).deep.to.eq([]);
-    }); 
-    it('should ', function(){
-        myExpect(difference([1,2,NaN,"b"], 2)).deep.to.eq([1,2]);
-    });     
+    it('should throw an error when given two illegal arguments', function(){
+        const illiegalArgumentsAdd = () => difference('a', 'b');
+        myExpect(illiegalArgumentsAdd).to.throw();
+    });
+    it('should throw an error when given no arguments', function(){
+        const noArgumentsAdd = () => difference();
+        myExpect(noArgumentsAdd).to.throw();
+    });    
 
 });
