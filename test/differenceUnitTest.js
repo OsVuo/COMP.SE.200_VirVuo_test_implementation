@@ -30,8 +30,11 @@ describe('expect', function(){
     it('should work with with other values besides integers', function(){
         myExpect(difference([1,2,NaN,"b"], ["b",3,NaN])).deep.to.eq([1,2]);
     });
-    it('should work with with other values besides integers', function(){
-        myExpect(difference(2, ["b",3,NaN])).deep.to.eq([1,2]);
-    });   
+    it('return an empty array without Arrays', function(){
+        myExpect(difference(2, ["b",3,NaN])).deep.to.eq([]);
+    }); 
+    it('should ', function(){
+        myExpect(difference([1,2,NaN,"b"], 2)).deep.to.eq([1,2]);
+    });     
 
 });
