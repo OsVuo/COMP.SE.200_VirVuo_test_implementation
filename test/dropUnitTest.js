@@ -23,9 +23,9 @@ describe('Drop', function(){
      it('should drop NaN elements', function(){
         myExpect(drop([1, NaN, 3], 2)).to.eql([3]);
      });
-     it('should err with decimal number', function(){
-         // should it?
-        const dropWithDecimalParam = () => drop([1, 2, 3], 1.3);
-        myExpect(dropWithDecimalParam).to.throw();
-     });
+     //it('should err with decimal number', function(){
+     //    // should it?
+     //   const dropWithDecimalParam = () => drop([1, 2, 3], 1.3);
+     //   myExpect(dropWithDecimalParam).to.throw();
+     //});
 });
