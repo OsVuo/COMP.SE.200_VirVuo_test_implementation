@@ -27,8 +27,8 @@ describe('expect', function(){
     it('should return an empty array if the first array is empty', function(){
         myExpect(difference([], [2,3])).deep.to.eq([]);
     });
-    it('should return an empty array if the first array is empty', function(){
-        myExpect(difference([1,2,NaN,"b"], ["b",3])).deep.to.eq([1,2]);
+    it('should work with with other values besides integers', function(){
+        myExpect(difference([1,2,NaN,"b"], ["b",3,NaN])).deep.to.eq([1,2]);
     });
 
 });
