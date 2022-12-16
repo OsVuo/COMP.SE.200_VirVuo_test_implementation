@@ -100,10 +100,8 @@
     "yocto-queue": "^0.1.0"
   },
   "scripts": {
-    "test": "npx c8 mocha",
-    "test_with_coverage": "npx c8 -r lcov mocha",
-    "test_with_lcov_report": "nyc --all --reporter=text-lcov",
-    "coverage": "nyc report --all --reporter=lcov"
+    "test": "npx c8 -n '**/application/*' -x '**/application/.internal/*' mocha",
+    "test_with_coverage": "npx c8 --all --exclude '*/test/*' -r lcov mocha"
   },
   
   "repository": {
