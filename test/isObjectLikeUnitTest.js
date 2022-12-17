@@ -1,7 +1,7 @@
 /**
- * Simple unit test where function isempty is tested.
+ * Simple unit test where function isObjectlike is tested.
  * 
- * function should return true or false depending on whether the object that it examines is empty
+ * function should return true or false depending on whether an object is entered
  */
 
 import expect from "chai";
