@@ -33,7 +33,7 @@ describe('Chunk', function(){
       it('should chunk when array objects are objectLike', function(){
          var audiA3 = {type:"Audi", model:"A3", milage:1512};
          var audiA4 = {type:"Audi", model:"A4", milage:6123};
-         var audiA6 = {type:"Audi", model:"A6", milage:1051};
+         var audiA6 = {type:"Audi", model:NaN, milage:1051};
          const myCars =[audiA3, audiA4, audiA6];
          myExpect(chunk(myCars)).to.have.length(3);
       });
