@@ -14,6 +14,6 @@ describe('filter', function(){
     
     it('should filter Arrays correctly', function(){
         const users = [{ 'user': 'Hawkeye', 'active': true },{ 'user': 'Radar', 'active': false }]
-        myExpect(filter(users, ({ active }) => active)).to.deep.eq(['Hawkeye']);
+        myExpect(filter(users, ({ active }) => active)).to.deep.eq([{ user: 'Hawkeye', active: true }]);
     });
 });
