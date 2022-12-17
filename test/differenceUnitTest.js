@@ -12,7 +12,7 @@ import difference from '../application/difference.js';
 
 var myExpect = expect.expect;
 
-describe('expect', function(){
+describe('Difference', function(){
     
     it('should exclude the values in the second array from the first array', function(){
         myExpect(difference([2,1], [2,3])).deep.to.eq([1]);

@@ -23,4 +23,22 @@ describe('Chunk', function(){
      it('should handle empty array', function(){
         myExpect(chunk([],2)[0]).to.eql([]);
      });
+     it('should throw an error when given no arguments', function(){
+      const noArgumentsAdd = () => chunk();
+      myExpect(noArgumentsAdd).to.throw();
+     });
+      it('should chunk by 1 if no size param is given', function(){
+         myExpect(chunk(['a','b','c','d','c','d'])).to.have.length(6);
+      });
+      it('should chunk when array objects are objectLike', function(){
+         var audiA3 = {type:"Audi", model:"A3", milage:1512};
+         var audiA4 = {type:"Audi", model:"A4", milage:6123};
+         var audiA6 = {type:"Audi", model:"A6", milage:1051};
+         const myCars =[audiA3, audiA4, audiA6];
+         myExpect(chunk(myCars)).to.have.length(3);
+      });
+      it('should chunk when array objects NaN', function(){
+         const myCars =[NaN,NaN,NaN];
+         myExpect(chunk(myCars)).to.have.length(3);
+      });
 });
