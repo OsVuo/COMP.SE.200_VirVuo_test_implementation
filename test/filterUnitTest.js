@@ -31,8 +31,8 @@ describe('filter', function(){
         const illegalArgumentsAdd = () => filter('a', 'b');
         myExpect(illegalArgumentsAdd).to.throw();
     });
-    it('return an array with an empty array when given no arguments', function(){
+    it('should throw an error when given no arguments', function(){
         const noArgumentsAdd = () => filter();
-        myExpect(noArgumentsAdd).to.deep.equal([[]]);
+        myExpect(noArgumentsAdd).to.throw();
     }); 
 });
