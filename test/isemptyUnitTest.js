@@ -12,8 +12,8 @@ var myExpect = expect.expect;
 
 describe('isEmpty', function(){
     
-    it('should return false if null is entered', function(){
-        myExpect(isEmpty(null)).deep.to.eq(false);
+    it('should return true if null is entered', function(){
+        myExpect(isEmpty(null)).to.eq(true);
     });
 
 });
