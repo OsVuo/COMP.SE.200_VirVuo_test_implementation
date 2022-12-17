@@ -19,8 +19,8 @@ describe('isEmpty', function(){
     it('should return true if true is entered', function(){
         myExpect(isEmpty(true)).to.eq(true);
     });    
-    it('should return true if a single integer is entered', function(){
-        myExpect(isEmpty(1)).to.eq(true);
+    it('should return true if an integer is entered', function(){
+        myExpect(isEmpty(12341)).to.eq(true);
     });
     it('should return false if a non empty array is entered', function(){
         myExpect(isEmpty([1,2,3])).to.eq(false);
