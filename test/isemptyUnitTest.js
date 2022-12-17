@@ -6,7 +6,7 @@
 
 import expect from "chai";
 
-import isEmpty from '../application/isEmpty';
+import isEmpty from '../application/isEmpty.js';
 
 var myExpect = expect.expect;
 
