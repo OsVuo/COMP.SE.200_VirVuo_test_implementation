@@ -6,7 +6,7 @@
 
 import expect from "chai";
 
-import isObjectLike from '../application/isObjectLike';
+import isObjectLike from '../application/isObjectLike.js';
 
 var myExpect = expect.expect;
 
