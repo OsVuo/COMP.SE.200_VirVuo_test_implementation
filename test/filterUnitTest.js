@@ -17,10 +17,10 @@ describe('filter', function(){
         { 'user': 'Radar', 'active': true }]
         myExpect(filter(users, ({ active }) => active)).to.deep.eq([{ 'user': 'Hawkeye', 'active': true },{ 'user': 'Radar', 'active': true }]);
     });
-    it('should return an empty array with a non matching filter', function(){
+    it('should return an array with an empty array with a non matching filter', function(){
         const users = [{ 'user': 'Scooby', 'Scaredy-Cat': true },{ 'user': 'Shaggy', 'Hungry': true },
         { 'user': 'Velma', '20-20': false }, { 'user': 'Fred', 'ascot': true }]
-        myExpect(filter(users, ({ active }) => active)).to.deep.eq([]);
+        myExpect(filter(users, ({ active }) => active)).to.deep.eq([[]]);
     });
     it('should return the original array if the filter filters everything', function(){
         const users = [{ 'user': 'Leonardo', 'Pizza': true },{ 'user': 'Raphael', 'Pizza': true },
