@@ -6,39 +6,44 @@
 
 import expect from "chai";
 
-import isEmpty from '../application/isEmpty.js';
+import isObjectLike from '../application/isObjectLike.js';
 
 var myExpect = expect.expect;
 
-describe('isEmpty', function(){
+describe('isObjectLike', function(){
     
-    it('should return true if null is entered', function(){
-        myExpect(isEmpty(null)).to.eq(true);
+    it('should return false if null is entered', function(){
+        myExpect(isObjectLike(null)).to.eq(false);
     });
 
-    it('should return true if true is entered', function(){
-        myExpect(isEmpty(true)).to.eq(true);
+    it('should return false if true is entered', function(){
+        myExpect(isObjectLike(true)).to.eq(false);
     });    
-    it('should return true if an integer is entered', function(){
-        myExpect(isEmpty(12341)).to.eq(true);
+    it('should return false if an integer is entered', function(){
+        myExpect(isObjectLike(1432)).to.eq(false);
     });
-    it('should return false if a non empty array is entered', function(){
-        myExpect(isEmpty([1,2,3])).to.eq(false);
+    it('should return true if a non empty array is entered', function(){
+        myExpect(isObjectLike([1,2,3])).to.eq(true);
     });
     it('should return true if an empty array is entered', function(){
-        myExpect(isEmpty([])).to.eq(true);
+        myExpect(isObjectLike([])).to.eq(true);
     });
-    it('should return false if a non empty map is entered', function(){
-        myExpect(isEmpty({'a': 1})).to.eq(false);
+    it('should return true if a non empty map is entered', function(){
+        myExpect(isObjectLike({'a': 1})).to.eq(true);
     });
     it('should return true if an empty map is entered', function(){
-        myExpect(isEmpty({})).to.eq(true);
+        myExpect(isObjectLike({})).to.eq(true);
     });   
     it('should return false if a string is entered', function(){
-        myExpect(isEmpty("abc kissa kavelee")).to.eq(false);
+        myExpect(isObjectLike("abc kissa kavelee")).to.eq(false);
     });  
-    it('should return true if an empty string is entered', function(){
-        myExpect(isEmpty("")).to.eq(true);
+    it('should return false if an empty string is entered', function(){
+        myExpect(isObjectLike("")).to.eq(false);
     });  
+    it('should return false if Function is entered', function(){
+        myExpect(isObjectLike(Function)).to.eq(false);
+    });  
+
+
 
 });
