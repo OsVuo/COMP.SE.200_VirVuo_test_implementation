@@ -11,7 +11,7 @@ describe('Chunk', function(){
     it('should seperate array as described in chunk documents', function(){
         myExpect(chunk(['a','b','c','d'],2)).to.eql([['a','b'],['c', 'd']]);
      });
-     it('should seperate array as described in chunk documents', function(){
+     it('should if the array cant be seperated evenly, create the last chunk to hold the exess, as described in chunk documents', function(){
         myExpect(chunk(['a','b','c','d'],3)).to.eql([['a','b', 'c'],['d']]);
      });
      it('should seperate array to correct amount of chunks', function(){
